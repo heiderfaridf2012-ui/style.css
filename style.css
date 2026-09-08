@@ -4,18 +4,69 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: sans-serif;
 }
 
-.Flores_Amarillas {
+.card {
   text-align: center;
-  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.Flores_Amarillas {
+  font-size: 2.2rem;
   font-weight: bold;
   color: #ffd700;
   border: 2px solid #ffd700;
-  padding: 20px 40px;
+  padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+button {
+  background-color: #ffd700;
+  color: #0d1117;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ffea00;
+}
+
+.oculto {
+  display: none;
+}
+
+.ramo-img {
+  width: 250px;
+  max-width: 80vw;
+  margin-top: 15px;
+}
+
+.animar-ramo {
+  animation: aparecer 1s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
