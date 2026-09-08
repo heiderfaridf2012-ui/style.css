@@ -8,9 +8,40 @@
 </head>
 <body>
 
-    <div class="Flores_Amarillas">
-        Flores Amarillas para ti
+    <div class="card">
+        <div class="Flores_Amarillas">
+            Flores Amarillas para ti
+        </div>
+
+        <!-- Botón para ver las flores -->
+        <button id="btnFlores" onclick="mostrarFlores()">Presiona aquí 💛</button>
+
+        <!-- Ramo de flores oculto al inicio -->
+        <div id="ramoContainer" class="oculto">
+            <img src="https://i.postimg.cc/85z11pM0/ramo-flores.png" alt="Ramo de flores amarillas" class="ramo-img">
+        </div>
     </div>
+
+    <!-- Canción de fondo -->
+    <audio id="musica" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        function mostrarFlores() {
+            // Mostrar el ramo
+            var ramo = document.getElementById('ramoContainer');
+            ramo.classList.remove('oculto');
+            ramo.classList.add('animar-ramo');
+
+            // Ocultar botón
+            document.getElementById('btnFlores').style.display = 'none';
+
+            // Reproducir música
+            var audio = document.getElementById('musica');
+            audio.play();
+        }
+    </script>
 
 </body>
 </html>
